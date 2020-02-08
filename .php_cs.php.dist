@@ -1,0 +1,14 @@
+<?php
+
+include_once __DIR__ . "/vendor/autoload.php";
+
+$_SERVER['DOCUMENT_ROOT'] = __DIR__;
+
+use PhpCsFixer\PhpCsFixerConfig;
+use PhpCsFixer\Config;
+
+return Config::create()
+    ->setUsingCache(true)
+    ->setRiskyAllowed(true)
+    ->setFinder(PhpCsFixerConfig::createPhpFilesFinder())
+    ->setRules(PhpCsFixerConfig::getAppliedRulesConfigForPhpFiles());

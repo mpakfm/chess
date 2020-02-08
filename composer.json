@@ -1,0 +1,23 @@
+{
+    "name": "mpak/chess",
+    "type": "project",
+    "require": {
+        "mpakfm/printu": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+          "": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Fomin",
+            "email": "mpakfm@gmail.com"
+        }
+    ]
+}
