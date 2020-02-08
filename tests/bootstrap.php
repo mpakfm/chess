@@ -1,5 +1,6 @@
 <?php
 
+use Mpakfm\Printu;
 use PHPUnit\Framework\Assert;
 use Tools\ConsoleColors;
 
@@ -8,7 +9,9 @@ define('ROOT_SERVER', 'TEST');
 
 $_SERVER["DOCUMENT_ROOT"] = __DIR__ . '/../';
 
-include_once __DIR__ . "../vendor/autoload.php";
+include_once __DIR__ . "/../vendor/autoload.php";
+
+Printu::setPath(__DIR__ . '/../log');
 
 // Загружаем assert-функции из phpunit
 require_once dirname((new ReflectionClass(Assert::class))->getFileName()) . '/Assert/Functions.php';

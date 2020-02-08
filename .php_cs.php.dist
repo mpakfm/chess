@@ -2,7 +2,11 @@
 
 include_once __DIR__ . "/vendor/autoload.php";
 
-$_SERVER['DOCUMENT_ROOT'] = __DIR__;
+if (!isset($_SERVER['DOCUMENT_ROOT']) || $_SERVER['DOCUMENT_ROOT'] == '') {
+    $_SERVER['DOCUMENT_ROOT'] = __DIR__;
+}
+
+\Mpakfm\Printu::setPath(__DIR__ . '/log');
 
 use PhpCsFixer\PhpCsFixerConfig;
 use PhpCsFixer\Config;

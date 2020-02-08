@@ -132,13 +132,13 @@ class PhpCsFixerTest extends TestCase {
         // Переформатируем строки с файлами.
         //
         // Было:
-        // 1) /home/bitrix/www/path/to/file.php (indentation_type, array_syntax)
+        // 1) /path/to/file.php (indentation_type, array_syntax)
         //
         // Стало:
         // 1) Code must use configured indentation type (4 spaces):
-        //  /home/bitrix/www/path/to/file.php:74
+        //  /path/to/file.php:74
         // 2) PHP arrays should be declared using short syntax:
-        //  /home/bitrix/www/path/to/file.php:95
+        //  /path/to/file.php:95
 
         $i = 1;
         foreach ($standardOutputLines as $line) {

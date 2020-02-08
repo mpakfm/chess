@@ -10,6 +10,6 @@ Printu::log('init', 'chess', 'ajax');
 Printu::log('init', 'chess', 'file');
 
 $tmp = [
-    'school' =>'',
-    'try' => 34
+    'school' => '',
+    'try'    => 34,
 ];

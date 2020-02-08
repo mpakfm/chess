@@ -3,8 +3,8 @@
 namespace PhpCsFixer;
 
 use LogicException;
-use RuntimeException;
 use ProcessExecutor\ProcessExecutor;
+use RuntimeException;
 use Tools\ConsoleColors;
 
 class PhpCsFixerFilesAnalyzer {
