@@ -3,8 +3,6 @@
 namespace test\Game;
 
 use Chess\Board;
-use Chess\Game;
-use Mpakfm\Printu;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -22,10 +20,5 @@ class BoardTest extends TestCase {
         assertEquals(0, Board::getCellColor('e', 2));
         assertEquals(0, Board::getCellColor('e', 4));
         assertEquals(1, Board::getCellColor('h', 8));
-    }
-
-    public function testGame() {
-        $game = new Game();
-
     }
 }

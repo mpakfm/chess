@@ -3,8 +3,6 @@
 namespace Chess;
 
 use Chess\Model\Figure;
-use Mpakfm\Printu;
-use Tools\ConsoleColors;
 
 /**
  * Created by PhpStorm.

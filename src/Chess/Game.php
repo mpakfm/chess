@@ -2,7 +2,6 @@
 
 namespace Chess;
 
-use Chess\Board;
 use Mpakfm\Printu;
 use Tools\ConsoleColors;
 
@@ -14,7 +13,6 @@ use Tools\ConsoleColors;
  */
 
 class Game {
-
     public const INPUT_DEFAULT_MESSAGE    = "Input your move: (e2-e4)\n";
     public const WRONG_MOVE_MESSAGE       = "Move format: e2-e4\n";
     public const WRONG_FIGURE_MESSAGE     = "Piece not found\n";

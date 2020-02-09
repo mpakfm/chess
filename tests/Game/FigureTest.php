@@ -2,15 +2,8 @@
 
 namespace test\Game;
 
-use Chess\ColorEnum;
 use Chess\Game;
-use Chess\Model\Bishop;
 use Chess\Model\Figure;
-use Chess\Model\King;
-use Chess\Model\Knight;
-use Chess\Model\Pawn;
-use Chess\Model\Queen;
-use Chess\Model\Rook;
 use PHPUnit\Framework\TestCase;
 
 /**
