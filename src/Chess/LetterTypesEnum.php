@@ -20,4 +20,14 @@ class LetterTypesEnum extends EnumAbstract {
     public const F = 6;
     public const G = 7;
     public const H = 8;
+
+    /**
+     * @param mixed $value
+     */
+    public static function validLetter($value) {
+        if (!in_array($value, self::getSystemNames())) {
+            throw new \Exception('Invalid letter');
+        }
+        return $value;
+    }
 }

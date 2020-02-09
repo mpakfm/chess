@@ -16,4 +16,8 @@ class Queen extends Figure {
         ColorEnum::WHITE => '♕',
         ColorEnum::BLACK => '♛',
     ];
+
+    public function checkMove(array $start, array $end): bool {
+        return true;
+    }
 }

@@ -47,6 +47,19 @@ class Board {
         }
     }
 
+    public function getCell($letter, $line): ?Figure {
+        return $this->matrix[$line][$letter];
+    }
+
+    public function setMove(array $start, array $end): void {
+        $figure = $this->getCell($start['letter'], $start['line']);
+        if (!$figure) {
+            throw new \Exception(Game::WRONG_FIGURE_MESSAGE);
+        }
+        $this->matrix[$end['line']][$end['letter']]     = $figure;
+        $this->matrix[$start['line']][$start['letter']] = null;
+    }
+
     public function drow(): void {
         echo "  " . implode(' ', LetterTypesEnum::getSystemNames()) . "\n";
         echo " ┏━━━━━━━━━━━━━━━┓\n";

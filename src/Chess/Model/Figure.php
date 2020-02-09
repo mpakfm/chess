@@ -4,7 +4,6 @@ namespace Chess\Model;
 
 use Chess\ColorEnum;
 use Chess\LetterTypesEnum;
-use Mpakfm\Printu;
 
 /**
  * Created by PhpStorm.
@@ -13,7 +12,7 @@ use Mpakfm\Printu;
  * Time: 18:25
  */
 
-class Figure {
+abstract class Figure {
 
     /**
      * @var int
@@ -64,4 +63,6 @@ class Figure {
         $this->color  = $color;
         $this->symbol = $this->symbolVariant[$color];
     }
+
+    abstract public function checkMove(array $start, array $end): bool;
 }

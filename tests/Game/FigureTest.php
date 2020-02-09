@@ -3,6 +3,7 @@
 namespace test\Game;
 
 use Chess\ColorEnum;
+use Chess\Game;
 use Chess\Model\Bishop;
 use Chess\Model\Figure;
 use Chess\Model\King;
@@ -84,5 +85,28 @@ class FigureTest extends TestCase {
         assertEquals('♔', $figure->symbol);
         $figure = Figure::create('e', 8);
         assertEquals('♚', $figure->symbol);
+    }
+
+    public function testMovePawn() {
+        $game   = new Game();
+        $figure = $game->board->getCell('e', 2);
+        $start  = [
+            'letter' => 'e',
+            'line'   => 2,
+        ];
+        $end = [
+            'letter' => 'e',
+            'line'   => 4,
+        ];
+        assertTrue($figure->checkMove($start, $end));
+        $start  = [
+            'letter' => 'e',
+            'line'   => 2,
+        ];
+        $end = [
+            'letter' => 'e',
+            'line'   => 2,
+        ];
+        assertFalse($figure->checkMove($start, $end));
     }
 }
