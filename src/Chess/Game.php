@@ -57,7 +57,7 @@ class Game {
 
     public function __construct() {
         $this->isFinish = false;
-        $this->board    = new Board();
+        $this->board    = new Board($this);
         $this->color    = ColorEnum::WHITE;
         $this->listing  = [];
     }
